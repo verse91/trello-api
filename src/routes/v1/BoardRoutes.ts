@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import { HttpStatus } from "http-status-ts";
+import { boardValidation } from "../../validations/BoardValidation";
 
 const router = express.Router();
 router
@@ -7,7 +8,5 @@ router
   .get((req: Request, res: Response) => {
     res.status(HttpStatus.OK).json({ message: "API GET List Board" });
   })
-  .post((req: Request, res: Response) => {
-    res.status(HttpStatus.CREATED).json({ message: "API POST List Board", code: HttpStatus.CREATED });
-  });
+  .post(boardValidation.createNew);
 export const boardRoutes = router;
