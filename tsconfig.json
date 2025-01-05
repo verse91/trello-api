@@ -5,11 +5,18 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types" // Ensuring TypeScript knows where to find custom types
+    ],
     "moduleResolution": "node",
     "paths": {
       "baseUrl": ["./"],
       "~/*": ["../src/*"]
     }
-  }
+  },
+  "include": [
+    "src", // Include your source folder
+    "config/types/type.d.ts" // Explicitly include your type declaration if needed
+  ]
 }

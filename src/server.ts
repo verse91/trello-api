@@ -1,31 +1,33 @@
 /* eslint-disable no-console */
 import express, { Request, Response } from "express";
+import { CLOSE_DB, CONNECT_DB, GET_DB } from "./config/mongodb";
 import exitHook from "async-exit-hook";
-import { CLOSE_DB, CONNECT_DB } from "./config/mongodb";
+import { API_V1 } from "./routes/v1/index";
+import { boardRoutes } from "./routes/v1/BoardRoutes";
 
 const app = express();
+const PORT = process.env.PORT;
 
 const START_SERVER = () => {
-  app.get("/", async (req: Request, res: Response) => {
-    res.send("<h1>Hello, TypeScript with Express!<h1>");
-  });
+    app.use('/v1', API_V1);
+    app.use("/v2", boardRoutes);
 
   app.get("/api", (req: Request, res: Response) => {
     res.json({ message: "Welcome to the API!" });
   });
 
   // Start server
-  app.listen(() => {
+  app.listen(PORT, () => {
     console.log(
       `Hi ${process.env.AUTHOR}. Server is running on http://${process.env.HOST}:${process.env.PORT}`
     );
   });
 
-  // Print exit signal be4 close the server
-  exitHook((signal: string) =>{
-    CLOSE_DB();
-    console.log("Exited with signal: ", signal);
-  })
+    exitHook((signal: any) => {
+      CLOSE_DB();
+
+      console.log("Exited with signal: ", signal);
+    });
 };
 
 // Connect to MongoDB and start the server
