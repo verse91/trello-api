@@ -18,5 +18,6 @@
   "include": [
     "src", // Include your source folder
     "config/types/type.d.ts" // Explicitly include your type declaration if needed
-  ]
+  ],
+  "exclude": ["node_modules"]
 }

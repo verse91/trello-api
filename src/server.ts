@@ -4,6 +4,7 @@ import { CLOSE_DB, CONNECT_DB} from "./config/mongodb";
 import exitHook from "async-exit-hook";
 import { API_V1 } from "./routes/v1/index";
 import { boardRoutes } from "./routes/v1/BoardRoutes";
+import { errorHandlingMiddleware } from "./middlewares/errorHandling.middleware";
 
 const app = express();
 const PORT = process.env.PORT;
@@ -12,6 +13,9 @@ const START_SERVER = () => {
     app.use(express.json()); // Let user send json data
     app.use('/v1', API_V1);
     app.use("/v2", boardRoutes);
+
+    // Xử lý lôi tập trung
+    app.use(errorHandlingMiddleware);
 
   app.get("/api", (req: Request, res: Response) => {
     res.json({ message: "Welcome to the API!" });
@@ -24,7 +28,7 @@ const START_SERVER = () => {
     );
   });
 
-    exitHook((signal: any) => {
+  exitHook((signal: any) => {
       CLOSE_DB();
 
       console.log("Exited with signal: ", signal);
