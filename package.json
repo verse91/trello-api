@@ -11,16 +11,17 @@
   "scripts": {
     "lint": "eslint src --ext js --report-unused-disable-directives --max-warnings 0",
     "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel ./src -d ./build/src",
-    "build": "npm run clean && npm run build-babel",
-    "production": "npm run build && node ./build/src/server.js",
-    "dev": "nodemon --exec bun ./src/server.ts"
+    "bun-build": "bun build ./src/server.ts --outdir ./build/src --target node",
+    "build": "bun run clean && bun run bun-build",
+    "production": "bun run build && cross-env BUILD_MODE=prod bun ./build/src/server.js",
+    "dev": "cross-env BUILD_MODE=dev nodemon --exec bun ./src/server.ts"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.26.0",
     "@babel/runtime": "^7.22.10",
     "async-exit-hook": "^2.0.1",
     "bun": "^1.1.42",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
     "express": "^4.18.2",
     "http-status-code": "^2.1.0",

@@ -5,6 +5,13 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "strict": true,
+    // "outDir": "./build/src",
+    // "rootDir": "./src",
+    "allowImportingTsExtensions": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "isolatedModules": true,
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types" // Ensuring TypeScript knows where to find custom types
