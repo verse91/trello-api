@@ -64,8 +64,12 @@ cp .env.example .env
 4. Cấu hình các biến môi trường trong file `.env`:
 
 ```env
-PORT=8017
-MONGODB_URI=mongodb://localhost:27017/trello
+MONGODB_URI=""
+DB_NAME=""
+HOST="localhost"
+PORT=3000
+
+AUTHOR=""
 ```
 
 ### Chạy ứng dụng
