@@ -18,9 +18,9 @@ Dự án này chỉ được code lại dưới mục đích học tập, không
 ## 📁 Cấu trúc thư mục
 
 ```
-├── .git/                   # Git repository
-├── build/                  # Thư mục chứa code đã build
-├── node_modules/          # Dependencies
+├── .git/                 # Git repository
+├── build/                # Thư mục chứa code đã build
+├── node_modules/         # Dependencies
 ├── src/
 │   ├── config/           # Cấu hình ứng dụng
 │   ├── controllers/      # Xử lý logic nghiệp vụ
@@ -34,17 +34,17 @@ Dự án này chỉ được code lại dưới mục đích học tập, không
 │   ├── validations/      # Schema validation
 │   └── server.ts         # Entry point
 │
-├── .babelrc             # Cấu hình Babel
-├── .env                 # Biến môi trường
-├── .eslintrc.cjs        # Cấu hình ESLint
-├── .gitignore           # Cấu hình Git ignore
-├── bun.lockb            # Lock file của Bun
-├── package.json         # Thông tin dự án và dependencies
-├── package-lock.json    # Lock file của npm
-├── tsconfig.json        # Cấu hình TypeScript chính
-├── tsconfig.app.json    # Cấu hình TypeScript cho app
-├── tsconfig.node.json   # Cấu hình TypeScript cho Node
-└── README.md            # Tài liệu dự án
+├── .babelrc              # Cấu hình Babel
+├── .env                  # Biến môi trường
+├── .eslintrc.cjs         # Cấu hình ESLint
+├── .gitignore            # Cấu hình Git ignore
+├── bun.lockb             # Lock file của Bun
+├── package.json          # Thông tin dự án và dependencies
+├── package-lock.json     # Lock file của npm
+├── tsconfig.json         # Cấu hình TypeScript chính
+├── tsconfig.app.json     # Cấu hình TypeScript cho app
+├── tsconfig.node.json    # Cấu hình TypeScript cho Node
+└── README.md             # Tài liệu dự án
 ```
 
 ## ⚙️ Cài đặt và Chạy
