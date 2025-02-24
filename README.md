@@ -60,7 +60,7 @@ Dự án này chỉ được code lại dưới mục đích học tập, không
 1. Clone dự án:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/verse91/trello-api.git
 cd trello-api
 ```
 
@@ -138,4 +138,4 @@ bun run production
 
 ## 📄 License
 
-Dự án này được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết.
+Dự án này được phân phối dưới giấy phép MIT.
