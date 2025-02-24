@@ -18,18 +18,33 @@ Dự án này chỉ được code lại dưới mục đích học tập, không
 ## 📁 Cấu trúc thư mục
 
 ```
-src/
-├── config/         # Cấu hình ứng dụng
-├── controllers/    # Xử lý logic nghiệp vụ
-├── middlewares/    # Middleware Express
-├── models/         # Schema và models MongoDB
-├── providers/      # Các service providers
-├── routes/         # Định tuyến API
-├── services/       # Business logic
-├── sockets/        # Xử lý WebSocket
-├── utils/          # Công cụ và helper functions
-├── validations/    # Schema validation
-└── server.ts       # Entry point
+├── .git/                   # Git repository
+├── build/                  # Thư mục chứa code đã build
+├── node_modules/          # Dependencies
+├── src/
+│   ├── config/           # Cấu hình ứng dụng
+│   ├── controllers/      # Xử lý logic nghiệp vụ
+│   ├── middlewares/      # Middleware Express
+│   ├── models/           # Schema và models MongoDB
+│   ├── providers/        # Các service providers
+│   ├── routes/           # Định tuyến API
+│   ├── services/         # Business logic
+│   ├── sockets/          # Xử lý WebSocket
+│   ├── utils/            # Công cụ và helper functions
+│   ├── validations/      # Schema validation
+│   └── server.ts         # Entry point
+│
+├── .babelrc              # Cấu hình Babel
+├── .env                  # Biến môi trường
+├── .eslintrc.cjs        # Cấu hình ESLint
+├── .gitignore           # Cấu hình Git ignore
+├── bun.lockb            # Lock file của Bun
+├── package.json         # Thông tin dự án và dependencies
+├── package-lock.json    # Lock file của npm
+├── tsconfig.json        # Cấu hình TypeScript chính
+├── tsconfig.app.json    # Cấu hình TypeScript cho app
+├── tsconfig.node.json   # Cấu hình TypeScript cho Node
+└── README.md            # Tài liệu dự án
 ```
 
 ## ⚙️ Cài đặt và Chạy
@@ -121,7 +136,6 @@ bun run production
 - `PUT /api/v1/boards/:boardId/cards/:cardId`: Cập nhật card
 - `DELETE /api/v1/boards/:boardId/cards/:cardId`: Xóa card
 
-
-#### 📄 License
+## 📄 License
 
 Dự án này được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết.
