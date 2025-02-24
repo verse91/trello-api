@@ -34,8 +34,8 @@ Dự án này chỉ được code lại dưới mục đích học tập, không
 │   ├── validations/      # Schema validation
 │   └── server.ts         # Entry point
 │
-├── .babelrc              # Cấu hình Babel
-├── .env                  # Biến môi trường
+├── .babelrc             # Cấu hình Babel
+├── .env                 # Biến môi trường
 ├── .eslintrc.cjs        # Cấu hình ESLint
 ├── .gitignore           # Cấu hình Git ignore
 ├── bun.lockb            # Lock file của Bun
