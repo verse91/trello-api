@@ -1,7 +1,3 @@
-Dưới đây là nội dung được viết lại hoàn toàn bằng tiếng Anh:
-
----
-
 # 🚀 Trello API Clone
 
 ## 📝 Introduction
