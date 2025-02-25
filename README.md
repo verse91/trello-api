@@ -1,82 +1,86 @@
+Dưới đây là nội dung được viết lại hoàn toàn bằng tiếng Anh:
+
+---
+
 # 🚀 Trello API Clone
 
-## 📝 Giới thiệu
+## 📝 Introduction
 
-Đây là dự án clone API của Trello - một công cụ quản lý công việc và dự án phổ biến. Dự án được xây dựng bằng Node.js, Express.js và MongoDB, sử dụng TypeScript để đảm bảo type-safe và dễ bảo trì.
-Dự án này chỉ được code lại dưới mục đích học tập, không phải là sản phẩm để sử dụng vào các dự án thực tế
+This is a project that clones the Trello API, a popular tool for task and project management. The project is built using Node.js, Express.js, and MongoDB, with TypeScript to ensure type safety and maintainability.  
+This project is developed purely for learning purposes and is not intended for use in real-world applications.
 
-## 🛠️ Công nghệ sử dụng
+## 🛠️ Technologies Used
 
-- **Node.js**: Nền tảng runtime
-- **Express.js**: Framework web
-- **MongoDB**: Cơ sở dữ liệu
-- **TypeScript**: Ngôn ngữ lập trình
+- **Node.js**: Runtime platform
+- **Express.js**: Web framework
+- **MongoDB**: Database
+- **TypeScript**: Programming language
 - **Socket.IO**: Real-time communication
-- **Joi**: Validation
+- **Joi**: Data validation
 - **Bun**: JavaScript runtime & bundler
 
-## 📁 Cấu trúc thư mục
+## 📁 Directory Structure
 
 ```
 ├── .git/                 # Git repository
-├── build/                # Thư mục chứa code đã build
-├── node_modules/         # Dependencies
+├── build/                # Directory for compiled code
+├── node_modules/         # Project dependencies
 ├── src/
-│   ├── config/           # Cấu hình ứng dụng
-│   ├── controllers/      # Xử lý logic nghiệp vụ
-│   ├── middlewares/      # Middleware Express
-│   ├── models/           # Schema và models MongoDB
-│   ├── providers/        # Các service providers
-│   ├── routes/           # Định tuyến API
-│   ├── services/         # Business logic
-│   ├── sockets/          # Xử lý WebSocket
-│   ├── utils/            # Công cụ và helper functions
-│   ├── validations/      # Schema validation
-│   └── server.ts         # Entry point
+│   ├── config/           # Application configuration
+│   ├── controllers/      # Business logic handling
+│   ├── middlewares/      # Express middleware
+│   ├── models/           # MongoDB schemas and models
+│   ├── providers/        # Service providers
+│   ├── routes/           # API routing
+│   ├── services/         # Core business logic
+│   ├── sockets/          # WebSocket handling
+│   ├── utils/            # Utilities and helper functions
+│   ├── validations/      # Validation schemas
+│   └── server.ts         # Application entry point
 │
-├── .babelrc              # Cấu hình Babel
-├── .env                  # Biến môi trường
-├── .eslintrc.cjs         # Cấu hình ESLint
-├── .gitignore            # Cấu hình Git ignore
-├── bun.lockb             # Lock file của Bun
-├── package.json          # Thông tin dự án và dependencies
-├── package-lock.json     # Lock file của npm
-├── tsconfig.json         # Cấu hình TypeScript chính
-├── tsconfig.app.json     # Cấu hình TypeScript cho app
-├── tsconfig.node.json    # Cấu hình TypeScript cho Node
-└── README.md             # Tài liệu dự án
+├── .babelrc              # Babel configuration
+├── .env                  # Environment variables
+├── .eslintrc.cjs         # ESLint configuration
+├── .gitignore            # Git ignore settings
+├── bun.lockb             # Bun lock file
+├── package.json          # Project info and dependencies
+├── package-lock.json     # npm lock file
+├── tsconfig.json         # Main TypeScript configuration
+├── tsconfig.app.json     # TypeScript config for the app
+├── tsconfig.node.json    # TypeScript config for Node
+└── README.md             # Project documentation
 ```
 
-## ⚙️ Cài đặt và Chạy
+## ⚙️ Installation and Setup
 
-### Yêu cầu hệ thống
+### System Requirements
 
-- Node.js 18.16.0 trở lên
+- Node.js 18.16.0 or higher
 - MongoDB
 - Bun (JavaScript runtime)
 
-### Các bước cài đặt
+### Installation Steps
 
-1. Clone dự án:
+1. Clone the project:
 
 ```bash
 git clone https://github.com/verse91/trello-api.git
 cd trello-api
 ```
 
-2. Cài đặt dependencies:
+2. Install dependencies:
 
 ```bash
 bun install
 ```
 
-3. Tạo file môi trường:
+3. Create an environment file:
 
 ```bash
 cp .env.example .env
 ```
 
-4. Cấu hình các biến môi trường trong file `.env`:
+4. Configure environment variables in the `.env` file:
 
 ```env
 MONGODB_URI=""
@@ -87,55 +91,55 @@ PORT=3000
 AUTHOR=""
 ```
 
-### Chạy ứng dụng
+### Running the Application
 
-- **Môi trường development**:
+- **Development mode**:
 
 ```bash
 bun run dev
 ```
 
-- **Môi trường production**:
+- **Production mode**:
 
 ```bash
 bun run production
 ```
 
-## 🔥 Tính năng chính
+## 🔥 Key Features
 
-- Quản lý boards
-- Quản lý lists
-- Quản lý cards
-- Hệ thống authentication
+- Board management
+- List management
+- Card management
+- Authentication system
 - Real-time updates
-- API RESTful
-- Validation dữ liệu
+- RESTful API
+- Data validation
 - Error handling
 
 ## 📚 API Documentation
 
 ### Boards
 
-- `GET /api/v1/boards`: Lấy danh sách boards
-- `POST /api/v1/boards`: Tạo board mới
-- `GET /api/v1/boards/:id`: Lấy thông tin board
-- `PUT /api/v1/boards/:id`: Cập nhật board
-- `DELETE /api/v1/boards/:id`: Xóa board
+- `GET /api/v1/boards`: Retrieve a list of boards
+- `POST /api/v1/boards`: Create a new board
+- `GET /api/v1/boards/:id`: Get board details
+- `PUT /api/v1/boards/:id`: Update a board
+- `DELETE /api/v1/boards/:id`: Delete a board
 
 ### Lists
 
-- `GET /api/v1/boards/:boardId/lists`: Lấy danh sách lists
-- `POST /api/v1/boards/:boardId/lists`: Tạo list mới
-- `PUT /api/v1/boards/:boardId/lists/:listId`: Cập nhật list
-- `DELETE /api/v1/boards/:boardId/lists/:listId`: Xóa list
+- `GET /api/v1/boards/:boardId/lists`: Retrieve a list of lists
+- `POST /api/v1/boards/:boardId/lists`: Create a new list
+- `PUT /api/v1/boards/:boardId/lists/:listId`: Update a list
+- `DELETE /api/v1/boards/:boardId/lists/:listId`: Delete a list
 
 ### Cards
 
-- `GET /api/v1/boards/:boardId/cards`: Lấy danh sách cards
-- `POST /api/v1/boards/:boardId/cards`: Tạo card mới
-- `PUT /api/v1/boards/:boardId/cards/:cardId`: Cập nhật card
-- `DELETE /api/v1/boards/:boardId/cards/:cardId`: Xóa card
+- `GET /api/v1/boards/:boardId/cards`: Retrieve a list of cards
+- `POST /api/v1/boards/:boardId/cards`: Create a new card
+- `PUT /api/v1/boards/:boardId/cards/:cardId`: Update a card
+- `DELETE /api/v1/boards/:boardId/cards/:cardId`: Delete a card
 
 ## 📄 License
 
-Dự án này được phân phối dưới giấy phép MIT.
+This project is distributed under the MIT License.
